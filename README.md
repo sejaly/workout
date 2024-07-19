@@ -3,13 +3,8 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
 
 
-#Features
+##Features
 
-##Add Workouts: Users can add their workouts by providing their name, workout type, and workout minutes.
-##Search and Filter: Users can search for workouts by name and filter by workout type.
-##Pagination: The workout list supports pagination to manage the display of data.
-##Workout Progress: Optionally, users can view their workout progress using charts.
-##Screenshots
 
 ## Development server
 
