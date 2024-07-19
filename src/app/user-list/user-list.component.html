@@ -1,0 +1,191 @@
+<!-- Container for the entire user list component
+<div class="container mx-auto p-4">
+
+     Add User Form -->
+    <!-- <form (ngSubmit)="addUser()" class="mb-6">
+      <div class="max-w-lg mx-auto">
+        <div class="flex flex-col space-y-4">
+          <div>
+            <label for="name" class="block text-lg font-medium text-gray-700">Name:</label>
+            <input id="name" [(ngModel)]="newUser.name" name="name" required
+                   class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          </div>
+  
+          <div>
+            <label for="type" class="block text-lg font-medium text-gray-700">Workout Type:</label>
+            <select id="type" [(ngModel)]="newUser.type" name="type" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              <option *ngFor="let type of workoutTypes" [value]="type">{{ type }}</option>
+            </select>
+          </div>
+  
+          <div>
+            <label for="minutes" class="block text-lg font-medium text-gray-700">Minutes:</label>
+            <input id="minutes" [(ngModel)]="newUser.minutes" name="minutes" type="number" min="0" required
+                   class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          </div>
+  
+          <button type="submit" class="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            Add
+          </button>
+        </div>
+      </div>
+    </form>
+   -->
+    <!-- Search and Filter -->
+    <!-- <div class="flex justify-between mb-6">
+      <div class="flex-1 mr-4">
+        <label for="search" class="block text-lg font-medium text-gray-700">Search by Name:</label>
+        <input id="search" [(ngModel)]="searchTerm" name="search" placeholder="Enter name"
+               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+      </div>
+  
+      <div class="flex-1 ml-4">
+        <label for="filter" class="block text-lg font-medium text-gray-700">Filter by Workout Type:</label>
+        <select id="filter" [(ngModel)]="filterType" name="filter"
+                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          <option value="">All Types</option>
+          <option *ngFor="let type of workoutTypes" [value]="type">{{ type }}</option>
+        </select>
+      </div>
+    </div> -->
+  
+    <!-- User List Table -->
+    <!-- <div class="overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Workout Types</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Number of Workouts</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total Workout Minutes</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <tr *ngFor="let user of paginatedUsers">
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ user.name }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ getWorkoutTypes(user) }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ getNumberOfWorkouts(user) }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ getTotalWorkoutMinutes(user) }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                <button (click)="handleButtonClick" class="text-indigo-600 hover:text-indigo-900">View Graph</button>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+   -->
+    <!-- Pagination Controls -->
+    <!-- <div class="flex justify-between items-center mt-6">
+      <button (click)="prevPage()" [disabled]="currentPage === 1" class="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        Previous
+      </button>
+      <span class="text-sm font-medium text-gray-700">Page {{ currentPage }} of {{ totalPages }}</span>
+      <button (click)="nextPage()" [disabled]="currentPage === totalPages" class="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        Next
+      </button>
+    </div> -->
+
+    <!-- <app-graph-modal [isVisible]="isModalVisible" 
+                  [chartData]="modalChartData" 
+                  [chartLabels]="modalChartLabels" 
+                  [chartType]="modalChartType"
+                  [graphTitle]="modalGraphTitle">
+</app-graph-modal> -->
+  
+  <!-- </div>
+   --> 
+
+
+   <!-- Container for the entire user list component -->
+<div class="container mx-auto p-4">
+
+    <!-- Add User Form -->
+    <form (ngSubmit)="addUser()" class="mb-6">
+      <div class="max-w-lg mx-auto">
+        <div class="flex flex-col space-y-4">
+          <div>
+            <label for="name" class="block text-lg font-medium text-gray-700">Name:</label>
+            <input id="name" [(ngModel)]="newUser.name" name="name" required
+                   class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          </div>
+  
+          <div>
+            <label for="type" class="block text-lg font-medium text-gray-700">Workout Type:</label>
+            <select id="type" [(ngModel)]="newUser.type" name="type" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              <option *ngFor="let type of workoutTypes" [value]="type">{{ type }}</option>
+            </select>
+          </div>
+  
+          <div>
+            <label for="minutes" class="block text-lg font-medium text-gray-700">Minutes:</label>
+            <input id="minutes" [(ngModel)]="newUser.minutes" name="minutes" type="number" min="0" required
+                   class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          </div>
+  
+          <button type="submit" class="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            Add
+          </button>
+        </div>
+      </div>
+    </form>
+  
+    <!-- Search and Filter -->
+    <div class="flex justify-between mb-6">
+      <div class="flex-1 mr-4">
+        <label for="search" class="block text-lg font-medium text-gray-700">Search by Name:</label>
+        <input id="search" [(ngModel)]="searchTerm" name="search" placeholder="Enter name"
+               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+      </div>
+  
+      <div class="flex-1 ml-4">
+        <label for="filter" class="block text-lg font-medium text-gray-700">Filter by Workout Type:</label>
+        <select id="filter" [(ngModel)]="filterType" name="filter"
+                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          <option value="">All Types</option>
+          <option *ngFor="let type of workoutTypes" [value]="type">{{ type }}</option>
+        </select>
+      </div>
+    </div>
+  
+    <!-- User List Table -->
+    <div class="overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Workout Types</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Number of Workouts</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total Workout Minutes</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          <tr *ngFor="let user of paginatedUsers">
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ user.name }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ getWorkoutTypes(user) }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ getNumberOfWorkouts(user) }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ getTotalWorkoutMinutes(user) }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+              <button (click)="openGraphDialog(user)" class="text-indigo-600 hover:text-indigo-900">View Graph</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Pagination Controls -->
+    <div class="flex justify-between items-center mt-6">
+      <button (click)="prevPage()" [disabled]="currentPage === 1" class="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        Previous
+      </button>
+      <span class="text-sm font-medium text-gray-700">Page {{ currentPage }} of {{ totalPages }}</span>
+      <button (click)="nextPage()" [disabled]="currentPage === totalPages" class="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        Next
+      </button>
+    </div>
+  
+  </div>
+  

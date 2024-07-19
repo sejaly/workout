@@ -1,0 +1,13 @@
+/* graph-dialog.component.css */
+.chart-container {
+    margin-bottom: 20px; /* Space between chart and other content */
+  }
+  
+  canvas {
+    display: block;
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+  }
+  
+  
+  
