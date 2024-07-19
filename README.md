@@ -8,6 +8,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### Search and Filter: Users can search for workouts by name and filter by workout type.
 ### Pagination: The workout list supports pagination to manage the display of data.
 ### Workout Progress:Users can view their workout progress using charts.
+
+## codecoverage report
+https://code-coverag-report.vercel.app/
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
